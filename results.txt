@@ -160,3 +160,11 @@ Metric        R^2                Days                n_ma               n_fut
 Average   0.01679 ( 0.01111)  5.57 ( 6.00)  9.57 (10.14)  3.29 ( 2.43)
 Median    0.01015 ( 0.00849)  5.00 ( 4.00)  8.00 ( 9.00)  1.00 ( 1.00)
 StDev     0.05105 ( 0.04425)  4.61 ( 4.55)  7.32 ( 7.29)  3.59 ( 2.30)
+
+#### add SelectKBest
+
+best[AAPL] is: {'r_sq': -0.00014903903486240822, 'days': 12, 'n_ma': 10, 'n_future': 1
+^that is of course weird
+DG: new best[stock]:  {'r_sq': 0.5171016570696323, 'days': 1, 'n_ma': 9, 'n_future': 9
+^that's pretty weird as well.
+I had to redo the correction of the indexing.
