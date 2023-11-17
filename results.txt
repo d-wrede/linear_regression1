@@ -302,3 +302,219 @@ Median    0.01652 ( 0.01596)  7.50 ( 7.00)  7.00 ( 8.00)  3.00 ( 3.00)
 StDev     0.05178 ( 0.03413)  5.97 ( 6.09)  8.70 ( 8.78)  4.73 ( 6.39)
 
 
+### Results with SelectKBest and grid search again, but now with_mean=True in StandardScaler. And more result data:
+
+len(df):  1258
+stock_ranges: {'days': (1, 15, 1), 'n_ma': (1, 15, 2), 'n_future': (1, 15, 1)}
+. . . . . . . . . . . . . . 
+Time for AAPL: 2 minutes and 46 seconds.
+best[AAPL] is: {'r_sq': 0.06489245956000378, 'days': 11, 'n_ma': 11, 'n_future': 6, 'features': {'EMA_9': 10.936157005152634, 'MACD_crossover_up': 12.037145299231232, 'MACD_crossover_down': 12.037145299231232}}
+
+best n_feature is -8
+secondbest[AAPL] is: {'r_sq': 0.0648271409647676, 'days': 12, 'n_ma': 11, 'n_future': 6, 'features': {'EMA_9': 11.007062898182946, 'MACD_crossover_up': 11.828400079213177, 'MACD_crossover_down': 11.828400079213177}}
+
+secondbest n_feature is -9
+len(df):  1259
+stock_ranges: {'days': (1, 15, 1), 'n_ma': (5, 21, 2), 'n_future': (1, 15, 2)}
+. . . . . . . . . . . . . . 
+Time for BAC: 1 minutes and 38 seconds.
+best[BAC] is: {'r_sq': -0.0023787161840931326, 'days': 6, 'n_ma': 9, 'n_future': 3, 'features': {'EMA_5': 7.030945849634106}}
+
+best n_feature is -5
+secondbest[BAC] is: {'r_sq': -0.0023787161840931326, 'days': 6, 'n_ma': 9, 'n_future': 3, 'features': {'EMA_5': 7.030945849634106}}
+
+secondbest n_feature is -6
+len(df):  1258
+stock_ranges: {'days': (1, 15, 1), 'n_ma': (10, 25, 2), 'n_future': (1, 15, 2)}
+. . . . . . . . . . . . . . 
+Time for COST: 1 minutes and 35 seconds.
+best[COST] is: {'r_sq': 0.15757482659049993, 'days': 13, 'n_ma': 16, 'n_future': 9, 'features': {'EMA_7': 18.755744150379474, 'EMA_12': 24.468728611690196}}
+
+best n_feature is -11
+secondbest[COST] is: {'r_sq': 0.1551926108755124, 'days': 13, 'n_ma': 16, 'n_future': 11, 'features': {'EMA_7': 20.728766339624357, 'EMA_12': 25.667970798452433}}
+
+secondbest n_feature is -11
+len(df):  1259
+stock_ranges: {'days': (1, 15, 1), 'n_ma': (1, 11, 1), 'n_future': (1, 15, 2)}
+. . . . . . . . . . . . . . 
+Time for C: 1 minutes and 60 seconds.
+best[C] is: {'r_sq': 0.010225550365437153, 'days': 2, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_1': 15.459214058771664, 'EMA_2': 10.302841931650775, 'MACD_value': 0.35375402563212877, 'Signal_line': 0.03903134356530646, 'MACD_rate_of_change': 0.009665453354767267, 'MACD_crossover_up': 0.17242556645649693, 'MACD_crossover_down': 0.1724255664564969}}
+
+best n_feature is 5
+secondbest[C] is: {'r_sq': 0.009359069532784092, 'days': 2, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_1': 15.459214058771664, 'EMA_2': 10.302841931650775, 'MACD_value': 0.35375402563212877, 'MACD_crossover_up': 0.17242556645649693, 'MACD_crossover_down': 0.1724255664564969}}
+
+secondbest n_feature is 3
+len(df):  1258
+stock_ranges: {'days': (1, 15, 1), 'n_ma': (1, 21, 2), 'n_future': (1, 21, 2)}
+. . . . . . . . . . . . . . 
+Time for DG: 2 minutes and 52 seconds.
+best[DG] is: {'r_sq': 0.004472674282567257, 'days': 13, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_5': 5.952110498502483}}
+
+best n_feature is -12
+secondbest[DG] is: {'r_sq': 0.004472674282567257, 'days': 13, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_5': 5.952110498502483}}
+
+secondbest n_feature is -13
+len(df):  1258
+stock_ranges: {'days': (1, 15, 1), 'n_ma': (8, 21, 2), 'n_future': (1, 15, 2)}
+. . . . . . . . . . . . . . 
+Time for FB: 1 minutes and 23 seconds.
+best[FB] is: {'r_sq': 0.07726864702106351, 'days': 2, 'n_ma': 18, 'n_future': 9, 'features': {'EMA_2': 10.93187095532533, 'MACD_crossover_up': 3.8634112591559764, 'MACD_crossover_down': 3.8634112591559764}}
+
+best n_feature is 1
+secondbest[FB] is: {'r_sq': 0.07726864702106351, 'days': 2, 'n_ma': 18, 'n_future': 9, 'features': {'EMA_2': 10.93187095532533, 'MACD_crossover_down': 3.8634112591559764}}
+
+secondbest n_feature is 0
+len(df):  1259
+stock_ranges: {'days': (1, 21, 2), 'n_ma': (1, 18, 2), 'n_future': (1, 21, 2)}
+. . . . . . . . . . 
+Time for HSBC: 2 minutes and 17 seconds.
+best[HSBC] is: {'r_sq': 0.13724893000243676, 'days': 17, 'n_ma': 17, 'n_future': 19, 'features': {'EMA_9': 22.3098336251711, 'EMA_10': 22.910584078071114}}
+
+best n_feature is -15
+secondbest[HSBC] is: {'r_sq': 0.13457984228363817, 'days': 17, 'n_ma': 17, 'n_future': 17, 'features': {'EMA_9': 20.881502271246827, 'EMA_10': 18.59902714115562}}
+
+secondbest n_feature is -14
+len(df):  1259
+stock_ranges: {'days': (1, 21, 2), 'n_ma': (1, 18, 2), 'n_future': (1, 21, 2)}
+. . . . . . . . . . 
+Time for JPM: 2 minutes and 17 seconds.
+best[JPM] is: {'r_sq': 0.0781819825301493, 'days': 19, 'n_ma': 13, 'n_future': 13, 'features': {'EMA_3': 11.68030009236269, 'EMA_4': 9.960363778882327, 'EMA_7': 23.627006660697084, 'EMA_11': 7.639992918037091, 'EMA_13': 12.702195248107598, 'EMA_17': 7.800913872267934, 'EMA_18': 7.803056648927197, 'MACD_crossover_up': 8.961316894143632, 'MACD_crossover_down': 8.961316894143632}}
+
+best n_feature is -10
+secondbest[JPM] is: {'r_sq': 0.07447934409049983, 'days': 19, 'n_ma': 13, 'n_future': 13, 'features': {'EMA_3': 11.68030009236269, 'EMA_4': 9.960363778882327, 'EMA_7': 23.627006660697084, 'EMA_13': 12.702195248107598, 'EMA_17': 7.800913872267934, 'EMA_18': 7.803056648927197, 'MACD_crossover_up': 8.961316894143632, 'MACD_crossover_down': 8.961316894143632}}
+
+secondbest n_feature is -11
+Total time: 16 minutes and 48 seconds
+best:
+ {'AAPL': {'r_sq': 0.06489245956000378, 'days': 11, 'n_ma': 11, 'n_future': 6, 'features': {'EMA_9': 10.936157005152634, 'MACD_crossover_up': 12.037145299231232, 'MACD_crossover_down': 12.037145299231232}}, 'BAC': {'r_sq': -0.0023787161840931326, 'days': 6, 'n_ma': 9, 'n_future': 3, 'features': {'EMA_5': 7.030945849634106}}, 'COST': {'r_sq': 0.15757482659049993, 'days': 13, 'n_ma': 16, 'n_future': 9, 'features': {'EMA_7': 18.755744150379474, 'EMA_12': 24.468728611690196}}, 'C': {'r_sq': 0.010225550365437153, 'days': 2, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_1': 15.459214058771664, 'EMA_2': 10.302841931650775, 'MACD_value': 0.35375402563212877, 'Signal_line': 0.03903134356530646, 'MACD_rate_of_change': 0.009665453354767267, 'MACD_crossover_up': 0.17242556645649693, 'MACD_crossover_down': 0.1724255664564969}}, 'DG': {'r_sq': 0.004472674282567257, 'days': 13, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_5': 5.952110498502483}}, 'FB': {'r_sq': 0.07726864702106351, 'days': 2, 'n_ma': 18, 'n_future': 9, 'features': {'EMA_2': 10.93187095532533, 'MACD_crossover_up': 3.8634112591559764, 'MACD_crossover_down': 3.8634112591559764}}, 'HSBC': {'r_sq': 0.13724893000243676, 'days': 17, 'n_ma': 17, 'n_future': 19, 'features': {'EMA_9': 22.3098336251711, 'EMA_10': 22.910584078071114}}, 'JPM': {'r_sq': 0.0781819825301493, 'days': 19, 'n_ma': 13, 'n_future': 13, 'features': {'EMA_3': 11.68030009236269, 'EMA_4': 9.960363778882327, 'EMA_7': 23.627006660697084, 'EMA_11': 7.639992918037091, 'EMA_13': 12.702195248107598, 'EMA_17': 7.800913872267934, 'EMA_18': 7.803056648927197, 'MACD_crossover_up': 8.961316894143632, 'MACD_crossover_down': 8.961316894143632}}}
+ 
+Ticker        R^2                 Days        n_ma      n_future
+----------------------------------------------------------------
+AAPL      0.06489 (   0.06483)     11 ( 12)     11 ( 11)      6 (  6)
+BAC      -0.00238 (  -0.00238)      6 (  6)      9 (  9)      3 (  3)
+COST      0.15757 (   0.15519)     13 ( 13)     16 ( 16)      9 ( 11)
+C         0.01023 (   0.00936)      2 (  2)      1 (  1)      1 (  1)
+DG        0.00447 (   0.00447)     13 ( 13)      1 (  1)      1 (  1)
+FB        0.07727 (   0.07727)      2 (  2)     18 ( 18)      9 (  9)
+HSBC      0.13725 (   0.13458)     17 ( 17)     17 ( 17)     19 ( 17)
+JPM       0.07818 (   0.07448)     19 ( 19)     13 ( 13)     13 ( 13)
+
+Performance Summary:
+Metric        R^2                Days                n_ma               n_fut
+Average   0.06594 ( 0.06473) 10.38 (10.50) 10.75 (10.75)  7.62 ( 7.62)
+Median    0.07108 ( 0.06965) 12.00 (12.50) 12.00 (12.00)  7.50 ( 7.50)
+StDev     0.06013 ( 0.05918)  6.46 ( 6.48)  6.73 ( 6.73)  6.25 ( 5.88)
+
+
+### rfecv experimenting with number of splits in cross validation
+LR on AAPL
+
+Time for AAPL: 0 minutes and 1 seconds.
+best[AAPL] is: {'r_sq': 0.028112834914657547, 'days': 12, 'n_ma': 9, 'n_future': 6, 'features': {'EMA_3': 1}}
+best splits:  2
+secondbest[AAPL] is: {'r_sq': 0.028112834914657547, 'days': 12, 'n_ma': 9, 'n_future': 6, 'features': {'EMA_3': 1}}
+secondbest splits:  4
+Total time: 0 minutes and 1 seconds
+best:
+ {'AAPL': {'r_sq': 0.028112834914657547, 'days': 12, 'n_ma': 9, 'n_future': 6, 'features': {'EMA_3': 1}}}
+Ticker        R^2                 Days        n_ma      n_future
+----------------------------------------------------------------
+AAPL      0.02811 (   0.02811)     12 ( 12)      9 (  9)      6 (  6)
+
+Performance Summary:
+Metric        R^2                Days                n_ma               n_fut
+Average   0.02811 ( 0.02811) 12.00 (12.00)  9.00 ( 9.00)  6.00 ( 6.00)
+Median    0.02811 ( 0.02811) 12.00 (12.00)  9.00 ( 9.00)  6.00 ( 6.00)
+StDev     0.00000 ( 0.00000)  0.00 ( 0.00)  0.00 ( 0.00)  0.00 ( 0.00)
+
+Time for AAPL: 2 minutes and 52 seconds.
+best[AAPL] is: {'r_sq': 0.024867225403663817, 'days': 13, 'n_ma': 9, 'n_future': 7, 'features': {'EMA_3': 1}}
+best splits:  2
+secondbest[AAPL] is: {'r_sq': 0.024867225403663817, 'days': 13, 'n_ma': 9, 'n_future': 7, 'features': {'EMA_3': 1}}
+secondbest splits:  3
+Total time: 2 minutes and 52 seconds
+best:
+ {'AAPL': {'r_sq': 0.024867225403663817, 'days': 13, 'n_ma': 9, 'n_future': 7, 'features': {'EMA_3': 1}}}
+Ticker        R^2                 Days        n_ma      n_future
+----------------------------------------------------------------
+AAPL      0.02487 (   0.02487)     13 ( 13)      9 (  9)      7 (  7)
+
+
+################ WOW! EIN (rfecv) DURCHBRUCH! #########
+
+Time for AAPL: 2 minutes and 16 seconds.
+best[AAPL] is: {'r_sq': 0.0515747388195541, 'days': 12, 'n_ma': 9, 'n_future': 4, 'features': {'EMA_3': 1, 'EMA_11': 1}}
+best splits:  3
+secondbest[AAPL] is: {'r_sq': 0.028112834914657547, 'days': 12, 'n_ma': 9, 'n_future': 6, 'features': {'EMA_3': 1}}
+secondbest splits:  2
+Total time: 2 minutes and 16 seconds
+best:
+ {'AAPL': {'r_sq': 0.0515747388195541, 'days': 12, 'n_ma': 9, 'n_future': 4, 'features': {'EMA_3': 1, 'EMA_11': 1}}}
+Ticker        R^2                 Days        n_ma      n_future
+----------------------------------------------------------------
+AAPL      0.05157 (   0.02811)     12 ( 12)      9 (  9)      4 (  6)
+
+
+Total time: 4 minutes and 26 seconds
+best:
+ {'AAPL': {'r_sq': 0.0515747388195541, 'days': 12, 'n_ma': 9, 'n_future': 4, 'features': {'EMA_3': 1, 'EMA_11': 1}}, 'BAC': {'r_sq': -0.004401535882659013, 'days': 1, 'n_ma': 10, 'n_future': 1, 'features': {'Signal_line': 1}}, 'COST': {'r_sq': 0.09912521182787126, 'days': 8, 'n_ma': 23, 'n_future': 13, 'features': {'EMA_5': 1}}, 'C': {'r_sq': 0.011514497591870176, 'days': 3, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_1': 1, 'EMA_2': 1, 'MACD_value': 1, 'Signal_line': 1}}, 'DG': {'r_sq': 0.004472674282567257, 'days': 13, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_5': 1}}, 'FB': {'r_sq': 0.0334415780926518, 'days': 7, 'n_ma': 20, 'n_future': 4, 'features': {'EMA_2': 1, 'MACD_crossover_up': 1}}, 'HSBC': {'r_sq': 0.07415475285917783, 'days': 19, 'n_ma': 16, 'n_future': 9, 'features': {'EMA_11': 1}}, 'JPM': {'r_sq': -0.006131242752965171, 'days': 1, 'n_ma': 4, 'n_future': 1, 'features': {'Signal_line': 1}}}
+Ticker        R^2                 Days        n_ma      n_future
+----------------------------------------------------------------
+AAPL      0.05157 (   0.02811)     12 ( 12)      9 (  9)      4 (  6)
+BAC      -0.00440 (  -0.00440)      1 (  1)     10 ( 10)      1 (  1)
+COST      0.09913 (   0.09913)      8 (  8)     23 ( 23)     13 ( 13)
+C         0.01151 (   0.00540)      3 (  1)      1 (  5)      1 (  3)
+DG        0.00447 (   0.00447)     13 ( 13)      1 (  1)      1 (  1)
+FB        0.03344 (   0.01962)      7 (  3)     20 ( 20)      4 (  8)
+HSBC      0.07415 (   0.07415)     19 ( 19)     16 ( 16)      9 (  9)
+JPM      -0.00613 (  -0.00613)      1 (  1)      4 (  4)      1 (  1)
+
+Performance Summary:
+Metric        R^2                Days                n_ma               n_fut
+Average   0.03297 ( 0.02754)  8.00 ( 7.25) 10.50 (11.00)  4.25 ( 5.25)
+Median    0.02248 ( 0.01251)  7.50 ( 5.50)  9.50 ( 9.50)  2.50 ( 4.50)
+StDev     0.03895 ( 0.03880)  6.39 ( 6.86)  8.47 ( 7.93)  4.50 ( 4.50)
+
+### new best AAPL (linear regression)
+all best splits from 2 to 4
+
+Total time: 8 minutes and 58 seconds
+best:
+ {'AAPL': {'r_sq': 0.06697945736093858, 'days': 14, 'n_ma': 8, 'n_future': 5, 'features': {'EMA_12': 1, 'MACD_crossover_down': 1}}, 'BAC': {'r_sq': -0.005934273547365532, 'days': 4, 'n_ma': 9, 'n_future': 1, 'features': {'Signal_line': 1}}, 'COST': {'r_sq': 0.12862014296508584, 'days': 13, 'n_ma': 16, 'n_future': 12, 'features': {'EMA_7': 1, 'EMA_10': 1, 'EMA_12': 1}}, 'C': {'r_sq': 0.011514497591870176, 'days': 3, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_1': 1, 'EMA_2': 1, 'MACD_value': 1, 'Signal_line': 1}}, 'DG': {'r_sq': 0.004472674282567257, 'days': 13, 'n_ma': 1, 'n_future': 1, 'features': {'EMA_5': 1}}, 'FB': {'r_sq': 0.04449225103060206, 'days': 2, 'n_ma': 17, 'n_future': 6, 'features': {'EMA_2': 1, 'MACD_crossover_down': 1}}, 'HSBC': {'r_sq': 0.11487262519345487, 'days': 17, 'n_ma': 19, 'n_future': 12, 'features': {'EMA_9': 1}}, 'JPM': {'r_sq': -0.0405181513891788, 'days': 20, 'n_ma': 16, 'n_future': 9, 'features': {'EMA_11': 1}}}
+Ticker        R^2                 Days        n_ma      n_future
+----------------------------------------------------------------
+AAPL      0.06698 (   0.05157)     14 ( 12)      8 (  9)      5 (  4)
+BAC      -0.00593 (  -0.00593)      4 (  4)      9 (  9)      1 (  1)
+COST      0.12862 (   0.10183)     13 ( 13)     16 ( 16)     12 (  9)
+C         0.01151 (   0.00739)      3 (  2)      1 (  1)      1 (  2)
+DG        0.00447 (   0.00447)     13 ( 13)      1 (  1)      1 (  1)
+FB        0.04449 (   0.03276)      2 (  3)     17 ( 19)      6 (  6)
+HSBC      0.11487 (   0.11487)     17 ( 17)     19 ( 19)     12 ( 12)
+JPM      -0.04052 (  -0.04052)     20 ( 20)     16 ( 16)      9 (  9)
+
+Performance Summary:
+Metric        R^2                Days                n_ma               n_fut
+Average   0.04056 ( 0.03331) 10.75 (10.50) 10.88 (11.25)  5.88 ( 5.50)
+Median    0.02800 ( 0.02008) 13.00 (12.50) 12.50 (12.50)  5.50 ( 5.00)
+StDev     0.05961 ( 0.05369)  6.84 ( 6.74)  7.20 ( 7.42)  4.73 ( 4.17)
+
+### random forest (well, a first run)
+
+Fitting 4 folds for each of 100 candidates, totalling 400 fits
+Best parameters found:  {'n_estimators': 100, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_depth': None}
+best[AAPL] is: {'r_sq': -0.35281603084836033, 'days': 14, 'n_ma': 8, 'n_future': 5, 'features': {'EMA_1': 1, 'EMA_2': 1, 'EMA_3': 1, 'EMA_4': 1, 'EMA_5': 1, 'EMA_6': 1, 'EMA_7': 1, 'EMA_8': 1, 'EMA_9': 1, 'EMA_10': 1, 'EMA_11': 1, 'EMA_12': 1, 'EMA_13': 1, 'EMA_14': 1, 'MACD_value': 1, 'Signal_line': 1, 'MACD_rate_of_change': 1, 'MACD_crossover_up': 1, 'MACD_crossover_down': 1}}
+best splits:  4
+secondbest[AAPL] is: {'r_sq': -1000000000.0}
+secondbest splits:  None
+. 
+Time for AAPL: 0 minutes and 50 seconds.
+best[AAPL] is: {'r_sq': -0.35281603084836033, 'days': 14, 'n_ma': 8, 'n_future': 5, 'features': {'EMA_1': 1, 'EMA_2': 1, 'EMA_3': 1, 'EMA_4': 1, 'EMA_5': 1, 'EMA_6': 1, 'EMA_7': 1, 'EMA_8': 1, 'EMA_9': 1, 'EMA_10': 1, 'EMA_11': 1, 'EMA_12': 1, 'EMA_13': 1, 'EMA_14': 1, 'MACD_value': 1, 'Signal_line': 1, 'MACD_rate_of_change': 1, 'MACD_crossover_up': 1, 'MACD_crossover_down': 1}}
+best splits:  4
+secondbest[AAPL] is: {'r_sq': -1000000000.0}
+secondbest splits:  None
+Total time: 0 minutes and 50 seconds
+best:
+ {'AAPL': {'r_sq': -0.35281603084836033, 'days': 14, 'n_ma': 8, 'n_future': 5, 'features': {'EMA_1': 1, 'EMA_2': 1, 'EMA_3': 1, 'EMA_4': 1, 'EMA_5': 1, 'EMA_6': 1, 'EMA_7': 1, 'EMA_8': 1, 'EMA_9': 1, 'EMA_10': 1, 'EMA_11': 1, 'EMA_12': 1, 'EMA_13': 1, 'EMA_14': 1, 'MACD_value': 1, 'Signal_line': 1, 'MACD_rate_of_change': 1, 'MACD_crossover_up': 1, 'MACD_crossover_down': 1}}}
+Ticker        R^2                 Days        n_ma      n_future
+----------------------------------------------------------------
+AAPL     -0.35282 (-1000000000.00000)     14 (n/a)      8 (n/a)      5 (n/a)
